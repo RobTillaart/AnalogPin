@@ -1,7 +1,7 @@
 //
 //    FILE: AnalogPin.cpp
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.2.2
+// VERSION: 0.2.3
 //    DATE: 2013-09-09
 // PURPOSE: wrapper for analogRead with smoothing and noise filtering
 //
@@ -14,6 +14,7 @@
 // 0.2.00 - 2015-05-14 added prescale support
 // 0.2.01 - 2015-12-19 breaking interface; big refactor;
 // 0.2.2    2020-03-25 refactor AVR specific code; bugfix
+// 0.2.3    2020-05-27 update library.json
 //
 // Released to the public domain
 //

@@ -2,7 +2,7 @@
 //
 //    FILE: AnalogPin.h
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.2.2
+// VERSION: 0.2.3
 //    DATE: 2013-09-09
 // PURPOSE: wrapper for analogRead with smoothing and noise filtering
 //     URL: https://github.com/RobTillaart/AnalogPin
@@ -10,7 +10,7 @@
 
 #include "Arduino.h"
 
-#define ANALOGPIN_LIB_VERSION "0.2.2"
+#define ANALOGPIN_LIB_VERSION "0.2.3"
 
 class AnalogPin
 {
