@@ -5,5 +5,3 @@ compile:
     - leonardo
     - due
     - zero
-    - esp8266
-    - esp32
