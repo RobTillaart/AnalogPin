@@ -27,8 +27,6 @@
 
 unittest_setup()
 {
-  AnalogPin AP(0);        // A0 not supported
-
 }
 
 unittest_teardown()
@@ -38,6 +36,8 @@ unittest_teardown()
 
 unittest(test_constructor)
 {
+  AnalogPin AP(0);        // A0 not supported
+
   assertEqual(7, AP.getPrescaler());
   assertEqual(0, AP.getSmoothWeight());
   assertEqual(0, AP.getNoiseThreshold);
@@ -50,6 +50,8 @@ unittest(test_constructor)
 
 unittest(test_prescaler)
 {
+  AnalogPin AP(0); 
+
   for (int i = 0; i < 8; i++)
   {
     AP.setPrescaler(i);
@@ -59,6 +61,8 @@ unittest(test_prescaler)
 
 unittest(test_noiseThreshold)
 {
+  AnalogPin AP(0);
+
   for (int i = 0; i < 31; i += 6)
   {
     AP.setNoiseThreshold(i);
@@ -68,6 +72,8 @@ unittest(test_noiseThreshold)
 
 unittest(test_smooth)
 {
+  AnalogPin AP(0);
+
   for (int i = 0; i < 31; i += 6)
   {
     AP.setSmoothWeight(i);
@@ -77,6 +83,8 @@ unittest(test_smooth)
 
 unittest(test_read)
 {
+  AnalogPin AP(0);
+
   // TODO unit test cannot read analogPort yet
   // assertEqual(0, AP.read());
   // assertEqual(0, AP.readSmoothed());
