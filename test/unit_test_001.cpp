@@ -90,7 +90,7 @@ unittest(test_smooth)
 unittest(test_read)
 {
   AnalogPin AP(0);
-  assetEqual(1, 1);
+  assertEqual(1, 1);
 
   // TODO unit test cannot read analogPort yet
   // assertEqual(0, AP.read());
