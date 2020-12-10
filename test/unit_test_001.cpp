@@ -52,7 +52,13 @@ unittest(test_prescaler)
 {
   AnalogPin AP(0); 
 
-  for (int i = 0; i < 8; i++)
+  // 0 and 1 are not allowed.
+  AP.setPrescaler(0);
+  assertNotEqual(0, AP.getPrescaler());
+  AP.setPrescaler(1);
+  assertNotEqual(1, AP.getPrescaler());
+
+  for (int i = 2; i < 8; i++)
   {
     AP.setPrescaler(i);
     assertEqual(i, AP.getPrescaler());
@@ -84,6 +90,7 @@ unittest(test_smooth)
 unittest(test_read)
 {
   AnalogPin AP(0);
+  assetEqual(1, 1);
 
   // TODO unit test cannot read analogPort yet
   // assertEqual(0, AP.read());
