@@ -1,7 +1,7 @@
 //
 //    FILE: AnalogPin.cpp
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.2.4
+// VERSION: 0.2.5
 //    DATE: 2013-09-09
 // PURPOSE: wrapper for analogRead with smoothing and noise filtering
 //
@@ -31,6 +31,21 @@ AnalogPin::AnalogPin(const uint8_t pin)
   _rawRead();
   _prevValue = _value;
 }
+
+
+void AnalogPin::setPrescaler(const uint8_t prescale = 7)
+{
+  _prescale = prescale; 
+  if (_prescale < 2)      _prescale = 2; 
+  else if (_prescale > 7) _prescale = 7; 
+};
+
+
+void AnalogPin::setSmoothWeight(const uint8_t alpha)
+{
+  _alpha = alpha;
+  if (_alpha > 31) _alpha = 31;
+};
 
 
 int AnalogPin::read(const bool twice)
