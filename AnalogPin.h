@@ -2,15 +2,17 @@
 //
 //    FILE: AnalogPin.h
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.2.4
+// VERSION: 0.2.5
 //    DATE: 2013-09-09
 // PURPOSE: wrapper for analogRead with smoothing and noise filtering
 //     URL: https://github.com/RobTillaart/AnalogPin
 //
 
+
 #include "Arduino.h"
 
-#define ANALOGPIN_LIB_VERSION "0.2.4"
+#define ANALOGPIN_LIB_VERSION       (F("0.2.5"))
+
 
 class AnalogPin
 {
@@ -42,9 +44,9 @@ public:
   inline int readPrevious(void) const { return _prevValue; }   
   inline int readLast(void) const { return _value; }
 
-private:
 
-  void    rawRead();
+private:
+  void    _rawRead();
 
   uint8_t _pin;
   uint8_t _alpha;
