@@ -33,7 +33,7 @@ AnalogPin::AnalogPin(const uint8_t pin)
 }
 
 
-void AnalogPin::setPrescaler(const uint8_t prescale = 7)
+void AnalogPin::setPrescaler(const uint8_t prescale)
 {
   _prescale = prescale; 
   if (_prescale < 2)      _prescale = 2; 
